@@ -1,7 +1,7 @@
-(function(wrn){
+(function(umt){
 
 	'use strict';
 	
-	wrn.extend = jQuery.extend;
+	umt.extend = jQuery.extend;
 
-})(wrn); //pass in global namespace
+})(umt); //pass in global namespace
