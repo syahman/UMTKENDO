@@ -1,0 +1,23 @@
+/*global css*/
+
+.deleteBtn{
+	color: #fff !important;
+	background-color:red !important;
+}
+
+.primaryBtn{
+	color: #fff !important;
+	background-color: #428BCA !important;
+	border: 1px solid #357EBD !important;
+}
+
+.defaultBtn{
+	color: #428BCA !important;
+	background-color: #fff !important;
+}
+
+.defaultEditBtn{
+	color: #fff !important;
+	background-color:red !important;
+	border: 1px solid red;
+}

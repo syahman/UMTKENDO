@@ -1,0 +1,20 @@
+<script id="groupListItemTemplate" type="text/x-kendo-template">
+	<li class="list-group-item" data-id="#= id#">
+		<div data-role="touch" data-tap="wrn.groupList.viewModel.viewGroup" data-id="#= id#" data-group=" #= group#">
+			<div class="groupListItem" data-bind="invisible: isEditMode">
+				<span class="glyphicon glyphicon-chevron-right groupListArrow"></span>
+	    		<span data-bind="invisible: isEditMode"> #= group# </span>
+	    	</div>
+	    </div>
+		<table data-bind="invisible: notEditMode" class="editGroupTable" cellspacing="1" cellpadding="1">
+			<tr>
+				<td>
+					<input type="text" data-id="#= id#" value="#= group#" class="form-control editGroupNameInput">
+				</td>
+				<td style="width:45px;">
+					<a class="deleteGroupBtn deleteBtn" data-role="button" data-bind="click:removeGroup"><span class="glyphicon glyphicon-trash"></span></a>
+				</td>
+			</tr>
+		</table>
+    </li>
+</script>

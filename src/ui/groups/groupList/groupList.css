@@ -1,0 +1,20 @@
+#groupListView .groupListArrow{
+	float:right;
+	display: block;
+	color: #428bca;
+}
+
+.editGroupTable{
+	width:100%;
+	border-collapse: collapse;
+	border-spacing:0;
+}
+
+.editGroupTable td{
+	padding:5px;
+}
+
+.groupListItem{
+	padding:15px;
+}
+

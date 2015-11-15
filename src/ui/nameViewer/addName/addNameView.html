@@ -1,0 +1,29 @@
+<div id="addNameView" 
+data-role="view" 
+data-layout="default"
+data-model="wrn.addName.viewModel"
+data-bind="events:{show:show,hide:hide,init:init}"
+>
+	<header data-role="header">
+		<div data-role="navbar">
+			<a data-align="left" data-role="button" class="defaultBtn" data-bind="click:viewPhotos"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			<span data-role="view-title">Add Name/Photo</span>
+		</div>
+	</header>
+	
+	<form>
+	<div class="well" style="border-radius:0;">
+		<div class="form-group">
+			<input type="text" id="photoNameInput" class="form-control" data-bind="value:name" placeholder="Enter Name">
+		</div>
+		<div class="form-group" style="margin-bottom:0;">
+			<input type="file" id="photoInput" class="form-control" accept="image/*;capture=camera">
+		</div>
+		<br>
+		<a data-align="right" data-enable="false" id="addNamePhotoBtn" data-bind="click:addPhoto" class="primaryBtn" data-role="button" style="width:100%">add</a>
+	</div>
+	</form>
+
+	<div class="alert alert-warning" data-bind="invisible: addedMessage" role="alert">Added! Add another if you like.</div>
+	
+</div>

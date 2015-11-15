@@ -1,0 +1,57 @@
+#viewerView #scrollview .photo{
+	height: 320px;
+	width:100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#viewerView .editPhotos{
+	margin-right:10px;
+}
+
+#viewerView .photoName{
+	text-align: center;
+	padding:7px 0;
+	font-size: 20px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom:0;
+	width:100%;
+}
+
+#viewerView .photoName span{
+	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding:0 5px;
+	max-width: 300px;
+	display:inline-block;
+	letter-spacing: 0.1em;
+}
+
+#viewerView .removePhotoNameBtn{
+	position: absolute;
+	right:7px;
+	top:30px;
+}
+
+#viewerView .groupNameBanner{
+	color: #fff;
+	background-color: #428BCA;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	border-top: 1px solid #357EBD;
+	border-bottom: 1px solid #357EBD;
+	text-overflow: ellipsis;
+	padding:3px 0;
+	font-weight: normal;
+	font-size: 10px;
+	text-transform: uppercase;
+	width:100%;
+	margin-bottom: -20px;
+	z-index: 2;
+	position: relative;
+}

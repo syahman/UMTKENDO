@@ -1,0 +1,22 @@
+<div id="addGroupView" 
+data-role="view" 
+data-layout="default"
+data-model="wrn.addGroup.viewModel"
+data-bind="events:{afterShow:afterShow,hide:hide,init:init}"
+>
+	<header data-role="header">
+		<div data-role="navbar">
+			<a data-align="left" class="defaultBtn" data-role="button" href="#groupListView">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<span data-role="view-title">Add A Group</span>
+		</div>
+	</header>
+	<div class="well" style="border-radius:0;">
+		<input type="text" class="form-control" id="addGroupInput" data-bind="value: groupName" placeholder="Enter Group Name">
+		<br>
+		<a data-align="right" id="addGroupBtn" data-role="button" class="primaryBtn" data-enable="false" data-bind="events{click: createGroup}" style="width:100%">add</a>
+
+	</div>
+	<div class="alert alert-warning" data-bind="invisible: addedMessage" role="alert">Added! Add another if you like.</div>
+</div>
