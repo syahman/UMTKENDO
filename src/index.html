@@ -3,7 +3,7 @@
 <head>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>whatsername app</title>
+    <title>UMTKENDO</title>
     <meta charset="utf-8" />
 
     <!-- ##### WARNING #### READ THIS ####### 
@@ -23,17 +23,18 @@
 
     <!-- endbuild -->
 
-    <!-- build:css whatsername.css -->
+    <!-- build:css umt.css -->
+
+
+
 
     <!-- globals CSS -->
     <link href="/shared/css/kendoOverides.css" rel="stylesheet"/>
     <link href="/shared/css/bootstrapOverides.css" rel="stylesheet"/>
-    <link href="/shared/css/whatsername.css" rel="stylesheet"/> <!-- i.e. global css -->
+    <link href="/shared/css/umt.css" rel="stylesheet"/> <!-- i.e. global css -->
 
     <!-- views CSS -->
-     <link href="/ui/appInfo/appInfo.css" rel="stylesheet"/>
-     <link href="/ui/nameViewer/viewer/viewer.css" rel="stylesheet"/>
-     <link href="/ui/groups/groupList/groupList.css" rel="stylesheet"/>
+    <!-- <link href="/ui/appInfo/appInfo.css" rel="stylesheet"/>-->
 
      <!-- layouts CSS -->
      <link href="/shared/layouts/global/globalLayout.css" rel="stylesheet"/>
@@ -50,15 +51,34 @@
     -->
 
     <!-- templates -->
-    @@include('./ui/groups/groupList/groupListItemTemplate.html')
-    @@include('./ui/nameViewer/viewer/scrollerTemplate.html')
 
-    <!-- views -->
-    @@include('./ui/appInfo/appInfoView.html')
-    @@include('./ui/groups/groupList/groupListView.html')
-    @@include('./ui/groups/addGroup/addGroupView.html')
-    @@include('./ui/nameViewer/addName/addNameView.html')
-    @@include('./ui/nameViewer/viewer/viewerView.html')
+
+    <!-- views UI UMTKENDO-->
+    @@include('./ui/actionsheet/actionsheet.html')
+    @@include('./ui/backbutton/backbutton.html')
+    @@include('./ui/button/button.html')
+    @@include('./ui/buttongroup/buttongroup.html')
+    @@include('./ui/collapsible/collapsible.html')
+    @@include('./ui/detailbutton/detailbutton.html')
+    @@include('./ui/intro/intro.html')
+    @@include('./ui/listview/listview.html')
+    @@include('./ui/loader/loader.html')
+    @@include('./ui/menu/menu.html')
+    @@include('./ui/mobilewidget/mobilewidget.html')
+    @@include('./ui/modalview/modalview.html')
+    @@include('./ui/navbar/navbar.html')
+    @@include('./ui/pane/pane.html')
+    @@include('./ui/popover/popover.html')
+    @@include('./ui/scroller/scroller.html')
+    @@include('./ui/scrollview/scrollview.html')
+    @@include('./ui/splitview/splitview.html')
+    @@include('./ui/switch/switch.html')
+    @@include('./ui/tabstrip/tabstrip.html')
+    @@include('./ui/touch/touch.html')
+
+
+
+
 
     <!-- layouts -->
     @@include('./shared/layouts/global/globalLayout.html')
@@ -69,7 +89,7 @@
 
 <!-- APP Namespace -->
 
-<script> this.whatsername = this.wrn = {}; //long and shortcut namespace </script>
+<script> this.umtapps = this.umt = {}; //long and shortcut namespace </script>
 
 <!-- build:js /thirdparty/thirdparty.js : Must run before utilities, models, and viewModels-->
 
@@ -82,30 +102,24 @@
 
 <!-- endbuild -->
 
-<!-- build:js whatsername.js -->
+<!-- build:js umt.js -->
 
 <!-- utilities : Must run before models & viewModels-->
 <script src="/shared/utilities/extend.js"></script>
-<script src="/shared/utilities/makeId.js"></script>
-<script src="/shared/utilities/removeDestroyed.js"></script>
 
 <!-- models  : Must run before viewModels-->
-<script src="/shared/models/groupModel.js"></script>
-<script src="/shared/models/viewerModel.js"></script>
+<script src="/shared/models/umtmodel.js"></script>
 
 <!-- viewModels  -->
-<script src="/ui/groups/groupList/groupListViewModel.js"></script>
-<script src="/ui/groups/addGroup/addGroupViewModel.js"></script>
-<script src="/ui/nameViewer/viewer/viewerViewModel.js"></script>
-<script src="/ui/nameViewer/addName/addNameViewModel.js"></script>
+<!--<script src="/ui/groups/groupList/groupListViewModel.js"></script>-->
 
 <!-- endbuild -->
 
 <!-- run application  -->
 <script>
-wrn.app = new kendo.mobile.Application(document.body, { //document.body is default, but I'm being explicit
+umt.app = new kendo.mobile.Application(document.body, { //document.body is default, but I'm being explicit
     skin: 'flat',
-    initial: 'groupListView', //this is the initial view to show
+    initial: 'intro', //this is the initial view to show
     init: function() {
         //fix mouse events in iOS don't do it for android, causes more issues than it fixes
         kendo.UserEvents.defaultThreshold(kendo.support.mobileOS.device === 'android' ? 0:20);
